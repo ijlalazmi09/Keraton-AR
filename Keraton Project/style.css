@@ -52,6 +52,7 @@ nav a{
 
 
 .ul-navbar{
+    list-style: none;
     display: flex;
     height: 63px;
     justify-content: end;
