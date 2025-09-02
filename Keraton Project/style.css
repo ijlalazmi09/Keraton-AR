@@ -69,7 +69,7 @@ nav a{
 }
 
 .main-content{
-    width: 50%;
+    width: 65%;
     justify-content: center;
     align-items: center;
     color: #f9fafb;
@@ -91,27 +91,17 @@ nav a{
 }
 
 .img-content{
-  max-width: 50%;
+  max-width: 30%;
   border-radius: 20px;
   background-color: #3c9993;
-  height: 390px;
+  height: 490px;
+  padding: 20px;
+  display: inline-block;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
 }
 
-.img-content video{
-    justify-content: center; 
-    width: 680px;
-    padding: 10px;
-}
-
-.card-section{
-    height: 800px;
-    align-items: center;
-    padding: 100px ;
-    position: relative;
-    overflow: hidden;
-    background-color: #011e37 ;
-    text-align: center;
-    }
 
 .h2-card-section{
     font-weight: 700;   
@@ -154,6 +144,7 @@ nav a{
     text-align: center;
     scroll-snap-align: start;
     opacity: 1;
+    
 }
 
 .card img {
