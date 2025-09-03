@@ -81,12 +81,34 @@ main {
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 20px;
+  animation: toRight 1s ease .5s 1 forwards;
 }
 .main-content p {
   color: #7f8898;
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 40px;
+  animation: toUp 1s ease .5s 1 forwards;
+}
+@keyframes toRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes toUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 main > img {
   width: 30%;
