@@ -151,7 +151,6 @@ main > img {
   overflow-x: auto;
   gap: 25px;
   scroll-snap-type: x mandatory;
-  max-width: 1200px;
   scrollbar-color: transparent transparent;
   width: 100%;
 }
