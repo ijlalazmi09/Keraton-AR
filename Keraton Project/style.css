@@ -81,40 +81,19 @@ main {
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 20px;
-  animation: toRight 1s ease .5s 1 forwards;
 }
 .main-content p {
   color: #7f8898;
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 40px;
-  animation: toUp 1s ease .5s 1 forwards;
-}
-@keyframes toRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-@keyframes toUp {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 main > img {
-  width: 30%;
-  background: #3c9993;
-  padding: 1em;
+  width: 35%;
   border-radius: 1em;
+}
+.float{
+  animation: float 4s ease-in-out infinite;
 }
 .card-section {
   height: 800px;
@@ -161,7 +140,6 @@ main > img {
   padding-top: 10px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   scroll-snap-align: start;
@@ -252,3 +230,10 @@ main > img {
   }
 
 }
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+    }
+
