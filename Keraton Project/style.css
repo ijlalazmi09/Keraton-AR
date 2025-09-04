@@ -41,12 +41,12 @@ header {
   color: #4ecdc4;
   margin-left: 10px;
 }
-.logo > h3::after{
-    content: "AR";
-    font-family: pixel;
-    color: gold;
-    font-weight: 700;
-    font-size: 1.8rem;
+.logo > h3::after {
+  content: "AR";
+  font-family: pixel;
+  color: gold;
+  font-weight: 700;
+  font-size: 1.8rem;
 }
 ul {
   list-style: none;
@@ -61,6 +61,10 @@ nav > ul > li > a {
   padding: 15px;
   font-weight: 700;
   font-size: 18px;
+  transition: .5s ease-in-out;
+}
+nav > ul > li >a:hover{
+  color: gold;
 }
 main {
   height: 100vh;
@@ -92,7 +96,50 @@ main > img {
   width: 35%;
   border-radius: 1em;
 }
-.float{
+#about {
+  min-height: 70vh;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  align-items: center;
+  background: #002b50d3;
+}
+#about > nav{
+  outline: 1px solid red;
+  height: max-content;
+}
+#about > nav > ul{
+  display: flex;
+  flex-direction: column;
+}
+#about > nav > ul > li{
+  color: white;
+  padding: 1em;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+#about > nav > ul > li > svg{
+  background: wheat;
+  border-radius: 100%;
+  fill: rgb(100, 85, 0);
+}
+#about > p {
+  background: var(--primary);
+  padding: 1.5em;
+  font-weight: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  border-radius: 5em 0 5em 0;
+  width: 50%;
+  color: white;
+  border: groove #f9fafb;
+}
+.float {
   animation: float 4s ease-in-out infinite;
 }
 .card-section {
@@ -128,22 +175,26 @@ main > img {
 .card-container {
   display: flex;
   overflow-x: auto;
-  gap: 25px;
+  gap: 1.5em;
   scroll-snap-type: x mandatory;
   scrollbar-color: transparent transparent;
   width: 100%;
+  padding: 1em;
 }
 
 .card {
   background-color: #202e44;
   min-width: 300px;
   padding-top: 10px;
-  border-radius: 15px;
+  border-radius: 1em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
   scroll-snap-align: start;
   opacity: 1;
+}
+.card:hover {
+  box-shadow: 0 0 15px goldenrod;
 }
 
 .card img {
@@ -179,9 +230,10 @@ main > img {
 }
 
 .card-footer {
-  padding: 15px 20px;
+  padding: 1em;
   background: #1c293d;
   border-top: 1px solid #eee;
+  border-radius: 0 0 1em 1em;
 }
 
 .read-more {
@@ -228,12 +280,16 @@ main > img {
   .header h1 {
     font-size: 2.5rem;
   }
-
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-    }
-
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
