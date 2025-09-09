@@ -308,8 +308,9 @@ footer > .emmet > .left > ul {
 footer > p {
   text-align: center;
   font-weight: bold;
-  background: white;
+  background: #011e37df;
   padding: 1em;
+  color: white;
 }
 @media (min-width: 768px) {
   .cards-container {
