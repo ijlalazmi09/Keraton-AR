@@ -61,9 +61,9 @@ nav > ul > li > a {
   padding: 15px;
   font-weight: 700;
   font-size: 18px;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
-nav > ul > li >a:hover{
+nav > ul > li > a:hover {
   color: gold;
 }
 main {
@@ -97,35 +97,38 @@ main > img {
   border-radius: 1em;
 }
 #about {
-  min-height: 70vh;
-  color: black;
+  height: 70vh;
   display: flex;
-  justify-content: space-around;
-  padding: 1em;
+  justify-content: space-between;
   align-items: center;
   background: #022442d3;
 }
-#about > nav{
-  outline: 1px solid red;
-  height: max-content;
+#about > aside {
+  background: #4ecdc4;
+  padding: 1em;
+  border-radius: 0 5em 5em 0;
 }
-#about > nav > ul{
+#about > aside > nav > ul {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  min-height: max-content;
+  gap: 5em;
 }
-#about > nav > ul > li{
+#about > aside > nav > ul > li {
   color: #f9f9f9;
-  padding: 1em;
-  font-weight: 700;
+  padding: 0.5em;
+  font-weight: bold;
   font-size: 1rem;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   cursor: pointer;
   display: flex;
+  background: #289b93;
+  border-radius: 5em;
   align-items: center;
+  gap: 1em;
 }
-#about > nav > ul > li > svg{
-  background: #4ecdc4;
-  border-radius: 100%;
+#about > aside > nav > ul > li > svg {
   fill: rgb(248, 230, 230);
 }
 #about > p {
@@ -267,8 +270,47 @@ main > img {
   margin: 15px 0;
   border-radius: 3px;
 }
-
-
+footer {
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  padding: 1em 0 0 0;
+  justify-content: space-between;
+}
+footer > .emmet {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em;
+}
+.emmet > iframe {
+  width: 25%;
+  height: 200%;
+}
+footer > .emmet > .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5em;
+}
+footer > .emmet > .left > h1 {
+  color: white;
+  margin-left: 0.5em;
+}
+footer > .emmet > .left > ul {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  margin-left: 1em;
+  align-items: flex-start;
+}
+footer > p {
+  text-align: center;
+  font-weight: bold;
+  background: white;
+  padding: 1em;
+}
 @media (min-width: 768px) {
   .cards-container {
     flex-direction: row;
