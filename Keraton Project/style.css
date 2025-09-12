@@ -23,8 +23,9 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  position: fixed;
+  position: sticky;
   z-index: 1000;
+  top: 0;
   padding: 10px 5%;
 }
 .logo {
@@ -48,22 +49,32 @@ header {
   font-weight: 700;
   font-size: 1.8rem;
 }
-ul {
+.icons {
+  display: none;
+  right: 0;
+}
+#check:checked ~ .navbar {
+  height: auto;
+}
+.navbar {
+  position: static;
+  height: auto;
+  width: auto;
   list-style: none;
   display: flex;
   height: 63px;
-  justify-content: end;
   align-items: center;
 }
-nav > ul > li > a {
+.navbar > a {
   color: #f9fafb;
   text-decoration: none;
+  transform: rotateY(0);
   padding: 15px;
   font-weight: 700;
   font-size: 18px;
   transition: 0.5s ease-in-out;
 }
-nav > ul > li > a:hover {
+.navbar > a:hover {
   color: gold;
 }
 main {
@@ -312,20 +323,9 @@ footer > p {
   padding: 1em;
   color: white;
 }
-@media (min-width: 768px) {
-  .cards-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+#check {
+  display: none;
 }
-
-@media (max-width: 767px) {
-  .header h1 {
-    font-size: 2.5rem;
-  }
-}
-
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -335,5 +335,72 @@ footer > p {
   }
   100% {
     transform: translateY(0px);
+  }
+}
+@media (min-width: 768px) {
+  .cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  header {
+    padding: 1.3rem 10%;
+  }
+  .icons {
+    display: inline-flex;
+    right: 5%;
+    font-size: 2.8rem;
+    color: white;
+    cursor: pointer;
+  }
+  .icons #close {
+    display: none;
+  }
+  #check:checked ~ .icons #menu {
+    display: none;
+  }
+  #check:checked ~ .icons #close {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    height: 0;
+    width: 100%;
+    transition: 0.3s ease;
+    background-color: #4713963d;
+    backdrop-filter: blur(100px);
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(255, 255, 255, 0.548);
+  }
+  #check:checked ~ .navbar {
+    height: 17.7rem;
+  }
+  .navbar > a {
+    display: inline;
+    font-size: 1.1rem;
+    margin: 0.5em;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50px);
+    transition: 0.3 ease;
+    opacity: 0;
+  }
+  #check:checked ~ .navbar a {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: calc(0.15s * var(--i));
+  }
+  .header h1 {
+    font-size: 2.5rem;
+  }
+  footer>p{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
   }
 }

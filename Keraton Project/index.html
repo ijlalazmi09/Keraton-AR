@@ -15,10 +15,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
     />
   </head>
 
@@ -28,18 +31,15 @@
         <img src="img/masjid agung.jpeg.jpg" class="logo-icon" />
         <h3>KOB</h3>
       </div>
-      <nav>
-        <ul>
-          <li>
-            <a href="#">Keraton</a>
-          </li>
-          <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
-            <a href="#cards">Explanation</a>
-          </li>
-        </ul>
+      <input type="checkbox" id="check" />
+      <label for="check" class="icons">
+        <i class="bxr bx-menu" id="menu"></i>
+        <i class="bxr bx-x" id="close"></i>
+      </label>
+      <nav class="navbar">
+        <a href="#" style="--i: 0">Keraton</a>
+        <a href="#about" style="--i: 1">About</a>
+        <a href="#cards" style="--i: 2">Explanation</a>
       </nav>
     </header>
 
@@ -53,7 +53,7 @@
           sayang kamu juga
         </p>
       </div>
-      <img src="img/main.png" class="float" />
+      <img src="main.png" class="float" />
     </main>
 
     <section id="about">
