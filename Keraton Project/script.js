@@ -10,10 +10,15 @@ const p = document.querySelector("#about > p");
 saveData.push(p.textContent);
 console.log({ saveData });
 
-// li.forEach((e,i) => {
-//   e[1].addEventListener('click', () => {
-//     p.innerHTML = teks1;
-// });})
+const mainContent = document.querySelector(".main-content");
+const img = document.querySelector(".float");
+const pBaru = document.querySelector("#yap");
+if (window.matchMedia("(max-width: 768px)").matches) {
+  mainContent.insertBefore(img, pBaru);
+  img.style.width = "65%";
+}else{
+  img.style.width = "35%";
+}
 
 for (let i = 0; i < 3; i++) {
   if (
