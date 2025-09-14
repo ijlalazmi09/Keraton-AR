@@ -57,7 +57,7 @@ header {
   transition: 0.5s ease-in-out;
 }
 .navbar > a:hover {
-  color: gold;
+  color: #4ecdc4;
 }
 main {
   height: 100vh;
@@ -67,7 +67,7 @@ main {
   padding: 2.5em;
 }
 main > .main-content > h2 > span {
-  color: rgb(255, 217, 0);
+  color: #4ecdc4;
 }
 .main-content {
   display: flex;
@@ -196,7 +196,7 @@ main > img {
   opacity: 1;
 }
 .card:hover {
-  box-shadow: 0 0 15px goldenrod;
+  box-shadow: 0 0 15px #4ecdc4;
 }
 
 .card img {
